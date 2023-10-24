@@ -100,7 +100,7 @@ header .logo {
   font-size: 24px;
   color: #fff;
   cursor: pointer;
-  margin-right: 5px; /* Add some spacing between the icon and text */
+  margin-right: 5px; 
 }
 
 .resum {
@@ -223,7 +223,7 @@ header .logo {
   border-right: none;
   border-top: none;
 }
-.menu-dot {
+.menu-content .menu-dot {
   width: 35%;
   position: absolute;
   top: 10%;
@@ -236,7 +236,7 @@ header .logo {
   width: 21px;
   height: 44px;
 }
-.shape4 {
+.menu-content .shape4 {
   width: 53px;
   height: 45px;
   position: absolute;
