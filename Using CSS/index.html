@@ -14,31 +14,47 @@
     <div class="container">
       <!-- Start Header -->
       <header>
+        <div class="logo">
+          <img src="./assets/img/logo.png" alt="Logo" />
+        </div>
+        <img
+          class="header__dotImg"
+          src="./assets/img/Dotted Texture.png"
+          alt="Dotted Texture"
+        />
         <!--Start Collapsible Menu -->
-
         <div class="menu">
-          <input type="checkbox" id="menu-toggle" />
-          <label for="menu-toggle" class="menu-icon"
+          <!-- clk btn -->
+          <input type="checkbox" id="menu--toggle" />
+          <label for="menu--toggle" class="menu--icon"
             ><i class="fa-solid fa-bars"></i
           ></label>
-          <div class="menu-content">
+          <div class="menu__content">
             <img
-              class="menu-dot"
+              class="menu__dotImg"
               src="./assets/img/Dotted Texture.png"
               alt="Dotted Texture"
             />
-            <img class="shape1" src="./assets/img/shape1.png" alt="shape" />
-            <img class="shape4" src="./assets/img/shape4.png" alt="shape" />
-            <input type="checkbox" id="menu-toggle" />
-            <label for="menu-toggle" class="close-button"
+            <img
+              class="menu__shape1"
+              src="./assets/img/shape1.png"
+              alt="shape"
+            />
+            <img
+              class="menu__shape4"
+              src="./assets/img/shape4.png"
+              alt="shape"
+            />
+            <input type="checkbox" id="menu--toggle" />
+            <label for="menu--toggle" class="close-button"
               ><i class="fa-solid fa-xmark"></i
             ></label>
-            <div class="person-info">
-              <div class="p-img">
+            <div class="menu__person-info">
+              <div class="Personimg">
                 <img src="/assets/img/person.png" alt="" class="person-img" />
                 <div class="download-container">
                   <i class="fa-solid fa-arrow-down download-icon"></i>
-                  <div class="resum">download resume</div>
+                  <div class="PersonResum">download resume</div>
                 </div>
                 <div class="shape">
                   <img
@@ -48,10 +64,10 @@
                   />
                 </div>
               </div>
-              <div class="p-name">
+              <p class="PersonName">
                 Hello, I'm John <strong style="color: white">Smith</strong>
-              </div>
-              <p>
+              </p>
+              <p class="PersonBrief">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Aperiam eos, adipisci earum quis corporis optio eius quasi. Quod
                 veritatis voluptates aut commodi.
@@ -60,49 +76,49 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
                 dolor. <a href="#" class="contactme link">contact me</a>
               </p>
-              <div class="p-skills">
-                <div class="skills-name">
-                  <p>photoshop</p>
-                  <div class="proce-line">
+              <div class="PersonSkills">
+                <div class="Skill">
+                  <p class="Skill__name">photoshop</p>
+                  <div class="ProgressLine">
                     <div class="rectp1"></div>
                     <div class="rectp2"></div>
                   </div>
                   <p class="percentage">95%</p>
                 </div>
-                <div class="skills-name">
-                  <p>illustrator</p>
-                  <div class="proce-line">
+                <div class="Skill">
+                  <p class="Skill__name">illustrator</p>
+                  <div class="ProgressLine">
                     <div class="recti1"></div>
                     <div class="recti2"></div>
                   </div>
                   <p class="percentage">70%</p>
                 </div>
-                <div class="skills-name">
-                  <p>html/css</p>
-                  <div class="proce-line">
+                <div class="Skill">
+                  <p class="Skill__name">html/css</p>
+                  <div class="ProgressLine">
                     <div class="recth1"></div>
                     <div class="recth2"></div>
                   </div>
-                  <p>95%</p>
+                  <p class="percentage">95%</p>
                 </div>
               </div>
-              <div class="experience">
-                <div class="exp">
-                  <p class="year">2000 - 2008</p>
+              <div class="PersonExperience">
+                <div class="Experience__Details">
+                  <p class="Experience__year">2000 - 2008</p>
                   <p>
                     Jr. Graphic Designer<span class="vertical-line"></span>
                     <span class="link">ABC Inc.</span>
                   </p>
                 </div>
-                <div class="exp">
-                  <p class="year">2008 - 2010</p>
+                <div class="Experience__Details">
+                  <p class="Experience__year">2008 - 2010</p>
                   <p>
                     Graphic Specialist<span class="vertical-line"></span>
                     <span class="link">GRAPHICSTUDIO</span>
                   </p>
                 </div>
-                <div class="exp">
-                  <p class="year">2010 - Present</p>
+                <div class="Experience__Details">
+                  <p class="Experience__year">2010 - Present</p>
                   <p>
                     creative director<span class="vertical-line"></span>
                     <span class="link">DESIGN ART</span>
@@ -113,57 +129,44 @@
           </div>
         </div>
         <!--End Collapsible Menu -->
-
-        <div class="logo">
-          <img src="./assets/img/logo.png" alt="Logo" />
-        </div>
-        <div class="header-content">
-          <img
-            class="dotted"
-            src="./assets/img/Dotted Texture.png"
-            alt="Dotted Texture"
-          />
-          <div class="text">
-            <h1 class="hello">Hello,</h1>
-            <p class="parg">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id,
-              atque aliquid laudantium quas ea fugiat doloremque dicta at sed!
-              Rerum?
-            </p>
-          </div>
-          <div class="shape1">
-            <img src="./assets/img/shape1.png" alt="shape" />
-          </div>
-        </div>
       </header>
       <!-- End Header -->
 
-      <!-- Start Second section -->
-      <div class="second-section"></div>
-      <div class="work">
-        <div class="box box1">
-          <img class="box-img" src="./assets/img/box1-img.png" alt="" />
+      <!-- Start Banner Section -->
+      <div class="Banner">
+        <div class="Banner--title">
+          <h1 class="hello">Hello,</h1>
+          <p class="Banner__pargraph">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, atque
+            aliquid laudantium quas ea fugiat doloremque dicta at sed! Rerum?
+          </p>
         </div>
-        <div class="box box2">
-          <img class="box-img" src="./assets/img/box2-img.png" alt="" />
-          <img src="./assets/img/shape2.png" alt="shape" class="shape2" />
-        </div>
-        <div class="box box3">
-          <img class="box-img" src="./assets/img/box3-img.png" alt="" />
-          <img src="./assets/img/shape4.png" alt="shape" class="shape4" />
-          <div class="button-corner">
-            <a href="#" class="button">read more</a>
-          </div>
-        </div>
+        <img src="./assets/img/shape1.png" alt="shape" class="shape1" />
 
-        <div class="box box4">
-          <img class="box-img" src="./assets/img/box4-img.png" alt="" />
-          <img src="./assets/img/shape3.png" alt="shape" class="shpe3" />
+        <div class="BannerWork">
+          <div class="box box1">
+            <a href="#">
+              <img class="box-img" src="./assets/img/box1-img.png" alt=""
+            /></a>
+          </div>
+          <div class="box box2">
+            <img class="box-img" src="./assets/img/box2-img.png" alt="" />
+            <img src="./assets/img/shape2.png" alt="shape" class="shape2" />
+          </div>
+          <div class="box box3">
+            <img class="box-img" src="./assets/img/box3-img.png" alt="" />
+            <img src="./assets/img/shape4.png" alt="shape" class="shape4" />
+            <div class="button-corner">
+              <a href="#" class="button">read more</a>
+            </div>
+          </div>
+          <div class="box box4">
+            <img class="box-img" src="./assets/img/box4-img.png" alt="" />
+            <img src="./assets/img/shape3.png" alt="shape" class="shpe3" />
+          </div>
         </div>
       </div>
     </div>
-    <!-- End Second section -->
-
     <!-- Start Footer Section -->
     <div class="footer-section">
       <div class=".">.</div>

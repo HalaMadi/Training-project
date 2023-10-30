@@ -1,5 +1,6 @@
 /* Start General */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +18,11 @@ body {
   margin: auto;
   /* height: 100vh; */
 }
+
 hr {
   border-top: 1px solid rgb(122, 121, 121);
 }
+
 /* End General */
 
 /* Start Header */
@@ -33,15 +36,18 @@ header .logo {
   margin-top: 7rem;
   padding-right: 2rem;
 }
+.header__dotImg {
+  width: 70%;
+}
 /* Start Collapsible Menu       
 */
 .menu {
   position: absolute;
   right: 0;
-  margin-top: 7rem;
+  height: 90%;
 }
 
-.menu-icon {
+.menu--icon {
   color: black;
   font-size: 1.5rem;
   padding: 16px;
@@ -50,12 +56,11 @@ header .logo {
   cursor: pointer;
 }
 
-.menu-content {
+.menu__content {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90%;
   display: none;
   background-color: #201e20;
   z-index: 1000;
@@ -71,16 +76,18 @@ header .logo {
   display: block;
 }
 
-.p-img {
+.Personimg {
   position: relative;
 }
-.p-img .shape2 {
+
+.Personimg .shape2 {
   width: 72px;
   height: 40px;
   position: absolute;
   left: 43%;
   top: 50%;
 }
+
 .download-container {
   position: absolute;
   top: 1rem;
@@ -100,10 +107,10 @@ header .logo {
   font-size: 24px;
   color: #fff;
   cursor: pointer;
-  margin-right: 5px; /* Add some spacing between the icon and text */
+  margin-right: 5px;
 }
 
-.resum {
+.PersonResum {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0px;
@@ -112,18 +119,15 @@ header .logo {
   font-weight: 700;
 }
 
-.person-info{
-
-}
-.person-info .p-name {
+.menu__person-info .PersonName {
   font-size: 43px;
   letter-spacing: 1px;
   line-height: 37px;
   color: #aeadae;
   text-align: center;
-  padding: 2rem;
   font-weight: 400;
 }
+
 .menu p {
   font-weight: 800;
   font-size: 1rem;
@@ -135,16 +139,20 @@ header .logo {
   padding-bottom: 2rem;
   margin: auto;
 }
-.p-skills {
+
+.PersonSkills {
   display: flex;
   justify-content: center;
 }
 
-.skills-name {
+.Skill {
   margin: 0rem 4rem;
-  flex-direction: column;
 }
-.skills-name p {
+.Skill .percentage {
+  width: 50%;
+}
+
+.Skill .Skill__name {
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 0px;
@@ -153,64 +161,72 @@ header .logo {
   font-weight: 700;
   padding-bottom: 1rem;
 }
-.proce-line {
+
+.ProgressLine {
   display: flex;
 }
-
 .rectp1 {
   width: 297px;
   height: 5px;
   border-radius: 2px;
   background-color: #c62fc6;
 }
+
 .rectp2 {
   width: 40px;
   height: 5px;
   border-radius: 2px;
   background-color: #000000;
 }
+
 .recti1 {
   width: 297px;
   height: 5px;
   border-radius: 2px;
   background-color: #f2d25d;
 }
+
 .recti2 {
   width: 90px;
   height: 5px;
   border-radius: 2px;
   background-color: #000000;
 }
+
 .recth1 {
   width: 297px;
   height: 5px;
   border-radius: 2px;
   background-color: #2959e1;
 }
+
 .recth2 {
-  width: 130px;
+  width: 110px;
   height: 5px;
   border-radius: 2px;
   background-color: #000000;
 }
-.experience {
+.PersonExperience {
   display: flex;
   justify-content: center;
 }
-.experience .exp {
+
+.PersonExperience .Experience__Details {
   border: 1px solid rgba(96, 93, 93, 0.29);
-  padding: 2rem;
   width: 50%;
 }
-.exp .year {
+
+.Experience__Details .Experience__year {
   font-size: 30px;
   letter-spacing: 1px;
   line-height: 28px;
   color: #ffffff;
   font-weight: 800;
   text-align: center;
+  padding: 0;
 }
-.exp p {
+
+.Experience__Details p {
   letter-spacing: 1px;
   line-height: 28px;
   color: #ffffff;
@@ -218,42 +234,46 @@ header .logo {
   text-align: center;
 }
 
-.exp .vertical-line {
+.Experience__Details .vertical-line {
   border: 1px solid rgb(209, 203, 203, 0.29);
   margin: 10px;
   border-bottom: none;
   border-right: none;
   border-top: none;
 }
-.menu-content .menu-dot {
-  width: 35%;
+
+.menu .menu__dotImg {
+  width: 45%;
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.549;
 }
-.menu-content .shape1 {
-  left: 35%;
+
+.menu .menu__shape1 {
   width: 21px;
   height: 44px;
+  left: 35%;
+  position: absolute;
 }
-.menu-content .shape4 {
+
+.menu .menu__shape4 {
   width: 53px;
   height: 45px;
   position: absolute;
-  top: 22%;
-  right: 30%;
 }
+
 input[type="checkbox"] {
   display: none;
 }
 
-input[type="checkbox"]:checked + .menu-icon + .menu-content {
+input[type="checkbox"]:checked + .menu--icon + .menu__content {
   display: block;
   max-height: 100%;
 }
-.menu-content .close-button {
+
+.menu__content .close-button {
   position: absolute;
   right: 20%;
   margin-top: 7rem;
@@ -262,17 +282,14 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   cursor: pointer;
 }
 
-/* End Collapsible Menu       
-*/
-.header-content .dotted {
-  width: 90%;
-}
+/* End Collapsible Menu */
 
-.header-content .text {
-  position: absolute;
-  left: 0;
-  padding: 20px;
-  z-index: 1;
+/* End Header */
+
+/* Start Banner Section */
+
+.Banner {
+  top: -10px;
 }
 
 .hello {
@@ -284,7 +301,8 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   margin-top: -93px;
   padding-bottom: 1.8rem;
 }
-.parg {
+
+.Banner__pargraph {
   width: 617px;
   height: 102px;
   font-size: 13px;
@@ -293,6 +311,7 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   color: #aeadae;
   font-weight: 400;
 }
+
 .shape1 {
   position: absolute;
   right: 40%;
@@ -300,46 +319,52 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   width: 36px;
   height: 77px;
 }
-/* End Header */
 
-.second-section {
-  margin-bottom: 10rem;
+.BannerWork {
+  margin-top: 10rem;
 }
-.work {
+
+.BannerWork {
   display: flex;
   flex-wrap: wrap;
   position: relative;
 }
+
 .box {
   width: 585px;
   height: 585px;
 }
+
 .box1 {
   background-color: #baecee;
 }
+
 .box2 {
   background-color: #fae1ef;
 }
+
 .box2 .shape2 {
   position: absolute;
   top: 5rem;
   right: 4rem;
 }
+
 .box3 {
   background-color: #fffce6;
   position: relative;
 }
+
 .box3 .shape4 {
   position: absolute;
   margin-top: -28rem;
   left: -12rem;
 }
+
 .button-corner {
   position: absolute;
   bottom: 10%;
   right: 20px;
 }
-
 
 .button {
   background-color: transparent;
@@ -348,17 +373,19 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   border: none;
   text-decoration: none;
   border: 1px solid black;
-  
 }
+
 .box4 {
   background-color: #e9bef6;
   position: relative;
 }
+
 .box4 .shpe3 {
   position: absolute;
   top: 48%;
   right: -2.48rem;
 }
+
 .box .box-img {
   display: block;
   margin-left: auto;
@@ -368,8 +395,9 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
 /* Start Footer */
 .footer-section {
   background-color: #f2fbfb;
-  margin-top: -8rem;
+  margin-top: -5rem;
 }
+
 .footer-section .footer-content {
   margin-top: 6rem;
   text-align: center;
@@ -383,13 +411,16 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   font-weight: 600;
   text-align: center;
   text-transform: uppercase;
-  padding: 4rem;
+  padding: 1rem;
 }
+
 .footer-img {
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+  width: 3rem;
 }
+
 .numbers {
-  font-size: 60px;
+  font-size: 45px;
   letter-spacing: 2px;
   line-height: 40px;
   color: #403d40;
@@ -397,6 +428,7 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   font-family: "Montserrat";
   text-align: center;
 }
+
 .footer-parag {
   font-size: 13px;
   letter-spacing: 0px;
@@ -408,14 +440,17 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   padding: 2rem;
   margin: auto;
 }
+
 .link {
   color: aquamarine;
 }
+
 .social {
   display: flex;
   justify-content: center;
   padding: 1rem;
 }
+
 .social .social-name {
   font-size: 13px;
   letter-spacing: 7px;
@@ -423,132 +458,176 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   text-transform: uppercase;
   color: #403d40;
   font-weight: 600;
-  width: 10%;
+  width: 20%;
 }
 
 /* Media query */
 /* Media query for small screens (e.g., mobile devices) */
 
-@media (max-width: 616px) and (min-width: 200px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .logo img {
     margin-top: 2rem;
     padding-right: 0;
     text-align: center;
     width: 100%;
   }
-  .header-content .hello {
+
+  .header__content .hello {
+    margin-top: -6rem;
     font-size: 70px;
     padding-bottom: 0;
   }
-  .header-content .parg {
+
+  .header__content .Banner__pargraph {
     font-size: 10px;
-    margin-top: 0;
-    padding-top: 0rem;
     width: 100%;
+    padding: 0;
   }
+
   .box2 .shape2 {
     top: 25%;
     right: 1px;
     width: 30%;
   }
+
   .shape1 {
-    right: 10%;
-    width: 10%;
+    right: 0;
+    width: 20px;
+    height: 42px;
   }
-  .work .box {
+
+  .box2 .shape2 {
+    top: 25%;
+    right: 30px;
+    width: 20%;
+  }
+
+  .BannerWork .box {
     width: 80%;
     height: 50%;
+    /* left: 20%;
+    background-color: #c62fc6; */
   }
-  .work .box-img {
+
+  .BannerWork .box-img {
     width: 100%;
     height: 50%;
   }
+
+  .loading {
+    font-size: 1rem;
+  }
+
   .footer-content .numbers {
     font-size: 20px;
   }
+
   .footer-parag {
     width: 100%;
   }
+
   .social .social-name {
     padding: 0.5rem;
-    font-size: 10px;
+    font-size: 8px;
+    width: 80%;
+  }
+
+  .menu__dotImg {
     width: 100%;
   }
-  .menu .shape2 {
-    left: 38%;
-  }
-  .menu .shape4 {
+
+  .menu .menu__shape4 {
     width: 30px;
-    right: 20%;
+    height: 20px;
+    right: 22%;
     top: 8%;
   }
-  .menu .menu-content .shape1 {
+
+  .menu__person-info .person-img {
+    margin-top: 5rem;
+    width: 70px;
+    height: 70px;
+  }
+
+  .menu .shape2 {
+    left: 40%;
+  }
+
+  .menu .menu__shape1 {
     width: 16px;
     left: 30%;
     top: 8%;
   }
-  .menu-dot {
-    width: 50%;
-    height: 20%;
-  }
-  .person-info .person-img {
-    margin-top: 3rem;
-    width: 70px;
-    height: 80px;
-  }
-  .person-info .download-container {
-    right: 28%;
-  }
-  .download-container .download-icon {
-    height: 20px;
-    font-size: 1rem;
-  }
-  .download-container .resum {
-    font-size: 8px;
+
+  .menu__person-info .download-container {
+    right: 32%;
   }
 
-  .person-info .p-name {
-    padding-top: 8px;
-    font-size: 20px;
+  .download-container .download-icon {
+    padding: 3px;
+    font-size: 11px;
+    height: 17px;
   }
-  .person-info p {
+
+  .download-container .PersonResum {
+    font-size: 6px;
+  }
+
+  .menu__person-info .PersonName {
+    padding-top: 7px;
+    font-size: 13px;
+    padding-bottom: 5px;
+  }
+
+  .menu__person-info .PersonBrief {
+    width: 90%;
+    font-size: 9px;
+  }
+
+  .PersonSkills .Skill p {
+    font-size: 10px;
+  }
+
+  .PersonExperience .Experience__Details .Experience__year {
+    font-size: 10px;
+  }
+  .menu__person-info p {
     width: 80%;
   }
 
-  .experience .exp .year {
-    font-size: 12px;
-  }
-  .experience .exp p {
-    font-size: 8px;
+  .PersonExperience .Experience__Details p {
+    font-size: 6px;
     width: 100%;
+    padding-left: 3px;
   }
 
-  .menu .menu-content {
-    height: 100%;
+  .menu .menu__content {
+    height: 800%;
   }
+
   .close-button {
     right: 5%;
   }
+
   .menu-checkbox {
     display: none;
   }
+
   .button-corner {
-  position: absolute;
-  bottom: 10%;
-  left: 2px;
-}
+    position: absolute;
+    bottom: 10%;
+    left: 2px;
+  }
 
-
-.button-corner .button {
-  background-color: transparent;
-  color: rgb(6, 6, 6);
-  padding: 8px 15px;
-  border: none;
-  text-decoration: none;
-  border: 1px solid black;
-  font-size: 10px;
-  
-}
+  .button-corner .button {
+    background-color: transparent;
+    color: rgb(6, 6, 6);
+    padding: 8px 15px;
+    border: none;
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 10px;
+  }
 }
 
 /* For smaller screens (e.g., mobile devices) */
@@ -568,7 +647,7 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
     font-size: 10px;
   }
 
-  .menu-content {
+  .menu__content {
     height: 85%;
     top: 0;
   }
@@ -583,59 +662,70 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
     font-size: 0.8rem;
   }
 
-  .menu-content .shape1 {
+  .menu .menu__shape1 {
     left: 35%;
     top: 10%;
     width: 15px;
     height: 33px;
   }
 
-  .shape4 {
+  .menu__shape4 {
     width: 30px;
     height: 25px;
     top: 12%;
     right: 30%;
   }
-  .menu-content .shape2 {
+
+  .menu__content .shape2 {
     width: 20px;
     height: 20px;
   }
+
   .download-container {
     right: 33%;
   }
+
   .download-icon {
     font-size: 20px;
   }
-  .resum {
+
+  .PersonResum {
     font-size: 10px;
   }
-  .p-name {
+
+  .PersonName {
     font-size: 26px;
     margin-top: 1rem;
   }
-  .skills-name {
+
+  .Skill {
     margin: 0rem 0rem;
     width: 30%;
   }
-  .proce-line {
+
+  .ProgressLine {
     width: 50%;
     margin: auto;
   }
-  .exp {
+
+  .Experience__Details {
     padding: 1rem 0rem;
   }
-  .exp .year {
+
+  .Experience__Details .Experience__year {
     font-size: 15px;
   }
-  .exp p {
+
+  .Experience__Details p {
     width: 80%;
   }
+
   .hello {
     font-size: 100px;
     margin-top: -60px;
   }
 
-  .parg {
+  .Banner__pargraph {
     width: 90%;
     font-size: 12px;
     padding: 1rem;
@@ -644,18 +734,17 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
 
 /* For larger screens (e.g., desktops) */
 @media (min-width: 769px) {
-
   .container {
     width: 90%;
   }
 
-  .menu .menu-dot {
+  .menu .menu__dotImg {
     width: 45%;
     top: 10%;
     left: 50%;
   }
 
-  .menu-content {
+  .menu__content {
     height: 73%;
     top: 0;
   }
@@ -669,74 +758,86 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   .download-container {
     right: 32%;
   }
+
   .download-icon {
     font-size: 20px;
   }
-  .resum {
+
+  .PersonResum {
     font-size: 10px;
   }
+
   .menu p {
     width: 60%;
     font-size: 12px;
   }
 
-  .p-name {
+  .PersonName {
     font-size: 33px;
   }
 
-  .skills-name {
+  .Skill {
     margin: 0rem 0rem;
     width: 30%;
   }
-  .proce-line {
+
+  .ProgressLine {
     width: 50%;
     margin: auto;
   }
-  .exp {
+
+  .Experience__Details {
     padding: 1rem 0rem;
     border-bottom: none;
   }
-  .exp .year {
+
+  .Experience__Details .Experience__year {
     font-size: 15px;
   }
-  .exp p {
+
+  .Experience__Details p {
     width: 100%;
   }
+
   .hello {
     font-size: 150px;
     margin-top: -93px;
     padding-bottom: 1.8rem;
   }
-  .menu-content .shape1 {
+
+  .menu .menu__shape1 {
     top: 20%;
     width: 21px;
     height: 44px;
   }
-  .shape4 {
+
+  .menu__shape4 {
     width: 53px;
     height: 45px;
     top: 22%;
     right: 30%;
   }
 
-  .parg {
+  .Banner__pargraph {
     width: 617px;
     height: 102px;
     font-size: 13px;
     padding: 20px;
   }
+
   .shape1 {
     right: 20%;
     top: 85%;
   }
+
   .box2 .shape2 {
     top: 26%;
     right: 0.5rem;
   }
-  .work {
+
+  .BannerWork {
     padding-left: 5rem;
   }
-  
 }
 
 /* lager screen */
@@ -745,40 +846,48 @@ input[type="checkbox"]:checked + .menu-icon + .menu-content {
   .container {
     width: 70%;
   }
-  .work .box {
+
+  .BannerWork .box {
     width: 50%;
     height: 550px;
   }
-  .work .box .box-img {
+
+  .BannerWork .box .box-img {
     width: 100%;
     height: 80%;
   }
-  .menu-content .menu-dot {
+
+  .menu__content .menu__dotImg {
     width: 35%;
   }
-  .menu-content {
+
+  .menu__content {
     height: 100%;
   }
-  .menu-content .download-container {
+
+  .menu__content .download-container {
     right: 34%;
   }
-  .download-container .resum {
+
+  .download-icon {
+    padding-top: 4px;
+  }
+
+  .download-container .PersonResum {
     font-size: 14px;
   }
-  .p-skills {
+
+  .PersonSkills {
     width: 100%;
     margin-top: 0px;
   }
-  .person-img {
-    width: 100px;
-    height: 100px;
-    margin-top: 130px;
-  }
-  .shape1,
+
+  .menu__shape1,
   .shape2 {
     width: 10%;
   }
-  .experience .exp p {
+
+  .PersonExperience .Experience__Details p {
     width: 100%;
     padding: 0px;
   }
