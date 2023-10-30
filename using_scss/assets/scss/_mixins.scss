@@ -1,0 +1,16 @@
+// _mixins.scss
+
+// Mixin for text properties
+
+@mixin text-properties($size, $spacing, $color, $weight,$line) {
+    font-size: $size;
+    letter-spacing: $spacing;
+    color: $color;
+    font-weight: $weight;
+    line-height:$line
+}
+
+@mixin dimensions($w, $h) {
+    width: $w;
+    height: $h;
+}
