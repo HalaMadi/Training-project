@@ -16,6 +16,9 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
 }
+a {
+  text-decoration: none;
+}
 .container {
   position: relative;
   width: 67%;
@@ -45,8 +48,10 @@ header {
     border: none;
     cursor: pointer;
   }
-  p {
-    width: 50%;
+  .PersonBrief,
+  .contact {
+    padding-top: 10px;
+    width: 60%;
     text-align: center;
     padding-bottom: 20px;
     margin: auto;
@@ -78,15 +83,16 @@ header {
   opacity: 0.549;
 }
 .menu__shape1 {
-  margin: 100px 400px;
+  top: 100px;
+  left: 450px;
   position: absolute;
   @include dimensions(21px, 44px);
 }
 .menu__shape4 {
   position: absolute;
-  right: 0;
-  margin-top: 100px;
-  margin-right: 350px;
+  right: 350px;
+  top: 180px;
+
   @include dimensions(43px, 35px);
 }
 .menu__close-button {
@@ -118,8 +124,8 @@ header {
   }
   .shape2 {
     position: absolute;
-    top: 50%;
-    left: 44%;
+    top: 60px;
+    left: 560px;
     @include dimensions(72px, 40px);
   }
   .download-container {
@@ -148,10 +154,13 @@ header {
 }
 .PersonSkills {
   justify-content: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 150px;
   .Skill {
-    width: 33%;
-    margin: 0px 94px;
+    padding: 8px;
+    font-size: 30px;
+    text-align: center;
     .Skill__name {
       text-transform: uppercase;
       padding-bottom: 10px;
@@ -191,16 +200,19 @@ header {
       }
     }
     .percentage {
-      width: 10%;
+      text-align: center;
+      padding-bottom: 20px;
+      margin: auto;
+      @include text-properties(12px, 1px, #aeadae, 800, 22px);
     }
   }
 }
 .PersonExperience {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+
   .Experience__Details {
     border: 1px solid rgba(96, 93, 93, 0.29);
-    width: 50%;
     .Experience__year {
       text-align: center;
       padding-top: 10px;
@@ -283,8 +295,8 @@ header {
     position: relative;
     .Work_shape3 {
       position: absolute;
-      top: 221px;
-      right: -100px;
+      top: 216px;
+      right: -55px;
     }
   }
   .button-corner {
@@ -312,11 +324,11 @@ header {
     .Footer__loading {
       text-align: center;
       text-transform: uppercase;
-      padding: 16px;
+      padding: 100px;
       @include text-properties(20px, 20px, #403d40, 600, 40px);
     }
-    .footer-img {
-      margin-bottom: 32px;
+    .Footer__img {
+      padding-bottom: 65px;
       width: 48px;
     }
     .Footer_numbers {
@@ -369,18 +381,6 @@ header {
       }
     }
   }
-  .Work__box2 {
-    .Work__shape2 {
-      top: 25%;
-      right: 1px;
-      width: 30%;
-    }
-  }
-  .Work__shape2 {
-    top: 35%;
-    left: 400px;
-    width: 100px;
-  }
   .Footer {
     width: 165%;
     .Footer__loading {
@@ -403,28 +403,22 @@ header {
     }
   }
   .menu {
-    margin: 80px;
     .menu__dotImg {
       width: 50%;
       top: 40px;
     }
     .menu__shape4 {
-      width: 30px;
-      height: 20px;
-      right: 22%;
-      top: 6%;
+      right: 170px;
+      top: 50px;
     }
     .shape2 {
       width: 30px;
       height: 20px;
+      left: 340px;
     }
     .menu__shape1 {
-      width: 16px;
-      margin-top: 40px;
-      margin-left: 200px;
-    }
-    .menu__content {
-      height: 61%;
+      top: 50px;
+      left: 250px;
     }
     .menu__person-info {
       .person-img {
@@ -433,7 +427,8 @@ header {
         height: 100px;
       }
       .download-container {
-        top: 10px;
+        top: 14px;
+        right: 260px;
         .download-icon {
           padding: 2px 0px;
           font-size: 11px;
@@ -448,52 +443,43 @@ header {
         font-size: 18px;
         padding-bottom: 5px;
       }
-      .PersonBrief {
-        width: 90%;
-        font-size: 11px;
-      }
     }
-    .PersonSkills {
-      padding: 0px;
+  }
+  .PersonSkills {
+    grid-template-columns: 150px 150px 150px;
+    gap: 50px;
+    p {
       .Skill {
-        width: 20%;
-        margin: 0px 30px;
-        p {
-          font-size: 10px;
-        }
-      }
-    }
-    .PersonExperience {
-      .Experience__Details {
-        .Experience__year {
-          font-size: 10px;
-        }
-        p {
-          font-size: 8px;
-          width: 100%;
-          padding-left: 3px;
-        }
+        font-size: 10px;
       }
     }
   }
-  .menu-checkbox {
-    display: none;
-  }
-  .button-corner {
-    position: absolute;
-    bottom: 100px;
-    left: 2px;
-    .button {
-      background-color: transparent;
-      color: rgb(6, 6, 6);
-      padding: 8px 15px;
-      border: none;
-      text-decoration: none;
-      border: 1px solid black;
-      font-size: 10px;
+  .PersonExperience {
+    .Experience__Details {
+      .Experience__year {
+        font-size: 10px;
+      }
+      p {
+        font-size: 8px;
+      }
     }
   }
 }
+.button-corner {
+  position: absolute;
+  bottom: 100px;
+  left: 2px;
+  .button {
+    background-color: transparent;
+    color: rgb(6, 6, 6);
+    padding: 8px 15px;
+    border: none;
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 10px;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 768px) {
   header {
     .logo {
@@ -511,43 +497,21 @@ header {
       display: none;
     }
   }
-  .Work {
-    margin-left: 150px;
-    .WorkLink {
-      @include dimensions(450px, 400px);
-      .Work__img {
-        @include dimensions(450px, 430px);
-      }
-    }
-  }
-  .Work__box2 {
-    .Work__shape2 {
-      margin-top: 350px;
-      right: 20px;
-    }
-  }
-  .Work__box4 {
-    .Work_shape3 {
-      margin-right: 35px;
-    }
-  }
   .menu {
     .menu__shape1 {
-      margin: 70px 210px;
-      width: 15px;
-      height: 33px;
+      top: 30px;
+      left: 250px;
     }
   }
   .menu__content {
-    height: 68%;
     .menu__shape4 {
-      width: 30px;
-      height: 25px;
-      right: 25%;
+      right: 150px;
+      top: 30px;
     }
     .shape2 {
       width: 30px;
       height: 20px;
+      left: 280px;
     }
     .menu__person-info {
       .person-img {
@@ -576,9 +540,9 @@ header {
         width: 80%;
       }
     }
-    .Skill {
-      margin: 10px 0px;
-      width: 35%;
+    .PersonSkills {
+      grid-template-columns: 250px 250px 250px;
+      gap: 3px;
     }
     .ProgressLine {
       width: 60%;
@@ -604,23 +568,26 @@ header {
     width: 70%;
   }
   .menu {
-    .menu__dotImg {
-      width: 45%;
-      top: 10%;
-      left: 50%;
+    .menu__shape4 {
+      top: 20px;
+      right: 250px;
+    }
+    .menu__shape1 {
+      left: 50px;
+      top: 20px;
     }
     .menu__content {
-      height: 100%;
-      .person-img {
-        margin-top: 60px;
-        @include dimensions(110px, 110px);
-      }
       .menu__person-info {
+        .person-img {
+          margin-top: 65px;
+          @include dimensions(130px, 130px);
+        }
         .shape2 {
-          @include dimensions(30px, 30px);
+          left: 430px;
+          @include dimensions(40px, 40px);
         }
         .download-container {
-          right: 31%;
+          right: 330px;
           .download-icon {
             font-size: 18px;
             height: 22px;
@@ -637,126 +604,92 @@ header {
           font-size: 28px;
         }
       }
-      .Skill {
-        margin: 0px 0px;
-        width: 30%;
-      }
-      .ProgressLine {
-        width: 80%;
-        margin: auto;
+      .PersonSkills {
+        grid-template-columns: 200px 200px 200px;
+        .Skill {
+          font-size: 30px;
+          text-align: center;
+        }
       }
       .Experience__Details {
         border-bottom: none;
         .Experience__year {
           font-size: 15px;
         }
-        p {
-          width: 100%;
-          font-size: 10px;
-        }
       }
       .hello {
         font-size: 120px;
-      }
-      .menu {
-        .menu__shape1 {
-          margin: 70px 290px;
-          @include dimensions(21px, 44px);
-        }
       }
       .Banner__pargraph {
         font-size: 13px;
         @include dimensions(617px, 102px);
       }
-      .Banner {
-        .Banner_shape1 {
-          right: 20px;
-        }
-      }
     }
   }
+  
 }
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
   .container {
     width: 70%;
   }
-  .Banner {
-    .Banner_shape1 {
-      right: 20px;
+  .menu {
+    .menu__shape4 {
+      top: 20px;
+      right: 250px;
     }
-    .Banner__contecnt {
+    .menu__shape1 {
+      left: 50px;
+      top: 20px;
+    }
+    .menu__content {
+      .menu__person-info {
+        .person-img {
+          margin-top: 65px;
+          @include dimensions(130px, 130px);
+        }
+        .shape2 {
+          left: 430px;
+          @include dimensions(40px, 40px);
+        }
+        .download-container {
+          right: 330px;
+          .download-icon {
+            font-size: 18px;
+            height: 22px;
+          }
+          .PersonResum {
+            font-size: 10px;
+          }
+          .PersonBrief {
+            width: 80%;
+          }
+        }
+        .PersonName {
+          padding-top: 16px;
+          font-size: 28px;
+        }
+      }
+      .PersonSkills {
+        grid-template-columns: 200px 200px 200px;
+        .Skill {
+          font-size: 30px;
+          text-align: center;
+        }
+      }
+      .Experience__Details {
+        border-bottom: none;
+        .Experience__year {
+          font-size: 15px;
+        }
+      }
       .hello {
         font-size: 120px;
       }
       .Banner__pargraph {
-        width: 617px;
-        height: 102px;
         font-size: 13px;
+        @include dimensions(617px, 102px);
       }
     }
   }
-  .Work {
-    margin-left: 150px;
-  }
-  .menu {
-    .menu__shape1 {
-      margin: 70px 290px;
-      width: 21px;
-      height: 44px;
-    }
-    .menu__dotImg {
-      width: 45%;
-      top: 10%;
-      left: 50%;
-    }
-    .menu__content {
-      height: 100%;
-    }
-    .menu__person-info {
-      .shape2 {
-        width: 30px;
-        height: 30px;
-      }
-      .person-img {
-        width: 110px;
-        height: 110px;
-        margin-top: 60px;
-      }
-      .download-container {
-        right: 31%;
-        .download-icon {
-          font-size: 18px;
-          height: 22px;
-        }
-        .PersonResum {
-          font-size: 10px;
-        }
-      }
-      .PersonName {
-        padding-top: 16px;
-        font-size: 28px;
-      }
-      .PersonBrief {
-        width: 80%;
-      }
-    }
-  }
-  .Skill {
-    margin: 0px 0px;
-    width: 30%;
-  }
-  .ProgressLine {
-    width: 80%;
-    margin: auto;
-  }
-  .Experience__Details {
-    border-bottom: none;
-    .Experience__year {
-      font-size: 15px;
-    }
-    p {
-      width: 100%;
-      font-size: 10px;
-    }
-  }
+  
 }
