@@ -9,7 +9,6 @@
     font-weight: $weight;
     line-height:$line
 }
-
 @mixin dimensions($w, $h) {
     width: $w;
     height: $h;

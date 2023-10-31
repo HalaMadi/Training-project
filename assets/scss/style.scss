@@ -16,15 +16,12 @@ body {
   font-family: "Montserrat", sans-serif;
   height: 100vh;
 }
-
 .container {
   position: relative;
   width: 67%;
   margin: auto;
 }
-
 //Start Header
-
 header {
   display: flex;
   position: relative;
@@ -39,14 +36,10 @@ header {
 }
 
 /* Start Collapsible Menu*/
-
 .menu {
-  right: 0;
   margin: auto;
-
   .menu-icon {
     color: black;
-    font-size: 24px;
     padding: 16px;
     font-size: 16px;
     border: none;
@@ -60,7 +53,6 @@ header {
     @include text-properties(12px, 1px, #aeadae, 800, 22px);
   }
 }
-
 .menu__content {
   position: fixed;
   top: 0;
@@ -69,42 +61,51 @@ header {
   display: none;
   background-color: #201e20;
   z-index: 1000;
-  .menu__dotImg {
-    width: 43%;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.549;
-  }
-  .menu__shape1 {
-    margin: 100px 400px;
-    position: absolute;
-    @include dimensions(21px, 44px);
-  }
-  .menu__shape4 {
-    position: absolute;
-    right: 350px;
-    top: 100px;
-    @include dimensions(43px, 35px);
-  }
-  .close-button {
-    position: absolute;
-    right: 20%;
-    margin-top: 112px;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  &:target {
+    display: block;
+    max-height: 100%;
   }
 }
-
+.menu__dotImg {
+  width: 43%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.549;
+}
+.menu__shape1 {
+  margin: 100px 400px;
+  position: absolute;
+  @include dimensions(21px, 44px);
+}
+.menu__shape4 {
+  position: absolute;
+  right: 0;
+  margin-top: 100px;
+  margin-right: 350px;
+  @include dimensions(43px, 35px);
+}
+.menu__close-button {
+  position: absolute;
+  right: 100px;
+  margin-top: 112px;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
 .menu__person-info {
   .PersonName {
     text-align: center;
     @include text-properties(30px, 1px, #aeadae, 400, 37px);
   }
+  .PersonName__strong {
+    color: #fff;
+  }
 }
-
 .Personimg {
   position: relative;
   .person-img {
@@ -121,28 +122,28 @@ header {
     left: 44%;
     @include dimensions(72px, 40px);
   }
-}
-.download-container {
-  position: absolute;
-  top: 26px;
-  right: 33%;
-  display: flex;
-  width: 13%;
-  .download-icon {
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 19px;
-    background-color: #d82547;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 5px;
-    @include dimensions(30px, 30px);
-  }
-  .PersonResum {
-    text-transform: uppercase;
-    @include text-properties(14px, 0px, #ffffff, 700, 12px);
+  .download-container {
+    right: 450px;
+    position: absolute;
+    top: 26px;
+    display: flex;
+    width: 13%;
+    .download-icon {
+      font-size: 24px;
+      cursor: pointer;
+      text-align: center;
+      border-radius: 19px;
+      background-color: #d82547;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+      margin-right: 5px;
+      @include dimensions(30px, 30px);
+    }
+    .PersonResum {
+      text-transform: uppercase;
+      @include text-properties(14px, 0px, #ffffff, 700, 12px);
+    }
   }
 }
 .PersonSkills {
@@ -163,31 +164,26 @@ header {
         background-color: #c62fc6;
         @include dimensions(200px, 5px);
       }
-
       .rectp2 {
         border-radius: 2px;
         background-color: #000000;
         @include dimensions(40px, 5px);
       }
-
       .recti1 {
         border-radius: 2px;
         background-color: #f2d25d;
         @include dimensions(200px, 5px);
       }
-
       .recti2 {
         border-radius: 2px;
         background-color: #000000;
         @include dimensions(80px, 5px);
       }
-
       .recth1 {
         border-radius: 2px;
         background-color: #2959e1;
         @include dimensions(200px, 5px);
       }
-
       .recth2 {
         border-radius: 2px;
         background-color: #000000;
@@ -223,18 +219,6 @@ header {
     }
   }
 }
-input[type="checkbox"] {
-  display: none;
-
-  &:checked {
-    + .menu--icon {
-      + .menu__content {
-        display: block;
-        max-height: 100%;
-      }
-    }
-  }
-}
 
 /* End Collapsible Menu */
 
@@ -244,7 +228,6 @@ input[type="checkbox"] {
 
 .Banner {
   z-index: 1;
-
   .Banner__contecnt {
     position: relative;
     .Banner_shape1 {
@@ -332,18 +315,15 @@ input[type="checkbox"] {
       padding: 16px;
       @include text-properties(20px, 20px, #403d40, 600, 40px);
     }
-
     .footer-img {
       margin-bottom: 32px;
       width: 48px;
     }
-
     .Footer_numbers {
       font-family: "Montserrat";
       text-align: center;
       @include text-properties(45px, 2px, #403d40, 600, 40px);
     }
-
     .Footer-paragraph {
       width: 50%;
       text-align: center;
@@ -496,15 +476,12 @@ input[type="checkbox"] {
       }
     }
   }
-  .close-button {
-    right: 5%;
-  }
   .menu-checkbox {
     display: none;
   }
   .button-corner {
     position: absolute;
-    bottom: 10%;
+    bottom: 100px;
     left: 2px;
     .button {
       background-color: transparent;
@@ -626,89 +603,71 @@ input[type="checkbox"] {
   .container {
     width: 70%;
   }
-
   .menu {
     .menu__dotImg {
       width: 45%;
       top: 10%;
       left: 50%;
     }
-
     .menu__content {
       height: 100%;
-
       .person-img {
         margin-top: 60px;
         @include dimensions(110px, 110px);
       }
-
       .menu__person-info {
         .shape2 {
           @include dimensions(30px, 30px);
         }
-
         .download-container {
           right: 31%;
-
           .download-icon {
             font-size: 18px;
             height: 22px;
           }
-
           .PersonResum {
             font-size: 10px;
           }
-
           .PersonBrief {
             width: 80%;
           }
         }
-
         .PersonName {
           padding-top: 16px;
           font-size: 28px;
         }
       }
-
       .Skill {
         margin: 0px 0px;
         width: 30%;
       }
-
       .ProgressLine {
         width: 80%;
         margin: auto;
       }
-
       .Experience__Details {
         border-bottom: none;
-
         .Experience__year {
           font-size: 15px;
         }
-
         p {
           width: 100%;
           font-size: 10px;
         }
       }
-
       .hello {
         font-size: 120px;
       }
-
       .menu {
         .menu__shape1 {
           margin: 70px 290px;
           @include dimensions(21px, 44px);
         }
       }
-
       .Banner__pargraph {
         font-size: 13px;
         @include dimensions(617px, 102px);
       }
-
       .Banner {
         .Banner_shape1 {
           right: 20px;

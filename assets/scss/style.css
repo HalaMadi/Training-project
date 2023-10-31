@@ -30,12 +30,10 @@ header .header__dotImg {
 
 /* Start Collapsible Menu*/
 .menu {
-  right: 0;
   margin: auto;
 }
 .menu .menu-icon {
   color: black;
-  font-size: 24px;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -61,8 +59,16 @@ header .header__dotImg {
   display: none;
   background-color: #201e20;
   z-index: 1000;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
-.menu__content .menu__dotImg {
+.menu__content:target {
+  display: block;
+  max-height: 100%;
+}
+
+.menu__dotImg {
   width: 43%;
   position: absolute;
   top: 10%;
@@ -70,22 +76,26 @@ header .header__dotImg {
   transform: translate(-50%, -50%);
   opacity: 0.549;
 }
-.menu__content .menu__shape1 {
+
+.menu__shape1 {
   margin: 100px 400px;
   position: absolute;
   width: 21px;
   height: 44px;
 }
-.menu__content .menu__shape4 {
+
+.menu__shape4 {
   position: absolute;
-  right: 350px;
-  top: 100px;
+  right: 0;
+  margin-top: 100px;
+  margin-right: 350px;
   width: 43px;
   height: 35px;
 }
-.menu__content .close-button {
+
+.menu__close-button {
   position: absolute;
-  right: 20%;
+  right: 100px;
   margin-top: 112px;
   font-size: 24px;
   color: white;
@@ -99,6 +109,9 @@ header .header__dotImg {
   color: #aeadae;
   font-weight: 400;
   line-height: 37px;
+}
+.menu__person-info .PersonName__strong {
+  color: #fff;
 }
 
 .Personimg {
@@ -120,15 +133,14 @@ header .header__dotImg {
   width: 72px;
   height: 40px;
 }
-
-.download-container {
+.Personimg .download-container {
+  right: 450px;
   position: absolute;
   top: 26px;
-  right: 33%;
   display: flex;
   width: 13%;
 }
-.download-container .download-icon {
+.Personimg .download-container .download-icon {
   font-size: 24px;
   cursor: pointer;
   text-align: center;
@@ -141,7 +153,7 @@ header .header__dotImg {
   width: 30px;
   height: 30px;
 }
-.download-container .PersonResum {
+.Personimg .download-container .PersonResum {
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0px;
@@ -241,14 +253,6 @@ header .header__dotImg {
   border-bottom: none;
   border-right: none;
   border-top: none;
-}
-
-input[type=checkbox] {
-  display: none;
-}
-input[type=checkbox]:checked + .menu--icon + .menu__content {
-  display: block;
-  max-height: 100%;
 }
 
 /* End Collapsible Menu */
@@ -511,15 +515,12 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
     width: 100%;
     padding-left: 3px;
   }
-  .close-button {
-    right: 5%;
-  }
   .menu-checkbox {
     display: none;
   }
   .button-corner {
     position: absolute;
-    bottom: 10%;
+    bottom: 100px;
     left: 2px;
   }
   .button-corner .button {

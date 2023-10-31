@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Document</title>
     <!-- Icons -->
     <link rel="stylesheet" href="./assets/scss/all.min.css" />
@@ -25,11 +24,10 @@
         <!--Start Collapsible Menu -->
         <div class="menu">
           <!-- clk btn -->
-          <input type="checkbox" id="menu--toggle" />
-          <label for="menu--toggle" class="menu--icon"
-            ><i class="fa-solid fa-bars"></i
-          ></label>
-          <div class="menu__content">
+          <a href="#menu--toggle" class="menu__button">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+          <div id="menu--toggle" class="menu__content">
             <img
               class="menu__dotImg"
               src="./assets/img/Dotted Texture.png"
@@ -45,10 +43,9 @@
               src="./assets/img/shape4.png"
               alt="shape"
             />
-            <input type="checkbox" id="menu--toggle" />
-            <label for="menu--toggle" class="close-button"
-              ><i class="fa-solid fa-xmark"></i
-            ></label>
+            <a href="#" class="menu__close-button">
+              <i class="fa-solid fa-xmark"></i>
+            </a>
             <div class="menu__person-info">
               <div class="Personimg">
                 <img src="/assets/img/person.png" alt="" class="person-img" />
@@ -65,14 +62,14 @@
                 </div>
               </div>
               <p class="PersonName">
-                Hello, I'm John <strong style="color: white">Smith</strong>
+                Hello, I'm John <strong class="PersonName__strong">Smith</strong>
               </p>
               <p class="PersonBrief">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Aperiam eos, adipisci earum quis corporis optio eius quasi. Quod
                 veritatis voluptates aut commodi.
               </p>
-              <p style="color: #514d4d9b">
+              <p>
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem,
                 dolor. <a href="#" class="contactme link">contact me</a>
               </p>
@@ -131,6 +128,7 @@
         <!--End Collapsible Menu -->
       </header>
       <!-- End Header -->
+
 
       <!-- Start Banner Section -->
       <div class="Banner">
