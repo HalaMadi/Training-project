@@ -151,8 +151,8 @@ header .header__dotImg {
 }
 
 .PersonSkills {
-  display: flex;
   justify-content: center;
+  display: flex;
 }
 .PersonSkills .Skill {
   width: 33%;
@@ -256,8 +256,6 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
 /* Start Banner Section */
 .Banner {
   z-index: 1;
-  top: -35px;
-  width: 100%;
 }
 .Banner .Banner__contecnt {
   position: relative;
@@ -405,22 +403,18 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    width: 30%;
+  }
   .logo img {
     width: 150px;
     margin-bottom: 50px;
   }
-  .Banner__contecnt .hello {
-    font-size: 70px;
+  .Banner .Banner__contecnt .hello {
+    font-size: 100px;
   }
-  .Banner__pargraph {
-    width: 220%;
+  .Banner .Banner__contecnt .Banner__pargraph {
     font-size: 13px;
-    padding: 0;
-  }
-  .Banner__shape1 {
-    right: -60px;
-    width: 20px;
-    height: 42px;
   }
   .Work__box2 .Work__shape2 {
     top: 25%;
@@ -433,18 +427,18 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
     width: 100px;
   }
   .Footer {
-    width: 189%;
+    width: 165%;
   }
-  .Footer__loading {
+  .Footer .Footer__loading {
     font-size: 16px;
   }
-  .Footer__content .Footer_numbers {
+  .Footer .Footer__content .Footer_numbers {
     font-size: 20px;
   }
-  .Footer__content-paragraph {
+  .Footer .Footer__content .Footer-paragraph {
     width: 100%;
   }
-  .Footer__content_social .Footer__SocialName {
+  .Footer .Footer__content .Footer_social .Footer__SocialName {
     padding: 0.8px;
     font-size: 8px;
     width: 80%;
@@ -457,78 +451,78 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
     top: 40px;
   }
   .menu .menu__shape4 {
+    width: 30px;
+    height: 20px;
     right: 22%;
     top: 6%;
+  }
+  .menu .shape2 {
     width: 30px;
     height: 20px;
   }
-  .menu__person-info .person-img {
-    margin-top: 90px;
-    width: 100px;
-    height: 100px;
-  }
-  .menu__person-info .shape2 {
-    width: 30px;
-    height: 20px;
-  }
-  .menu__person-info .menu__shape1 {
+  .menu .menu__shape1 {
     width: 16px;
     margin-top: 40px;
     margin-left: 200px;
   }
-  .menu__person-info .menu__shape1 .download-container {
+  .menu .menu__content {
+    height: 61%;
+  }
+  .menu .menu__person-info .person-img {
+    margin-top: 90px;
+    width: 100px;
+    height: 100px;
+  }
+  .menu .menu__person-info .download-container {
     top: 10px;
   }
-  .menu__person-info .menu__shape1 .download-container .download-icon {
+  .menu .menu__person-info .download-container .download-icon {
     padding: 2px 0px;
     font-size: 11px;
     height: 17px;
   }
-  .menu__person-info .menu__shape1 .download-container .PersonResum {
+  .menu .menu__person-info .download-container .PersonResum {
     font-size: 10px;
   }
-  .menu__person-info .menu__shape1 .PersonName {
+  .menu .menu__person-info .PersonName {
     padding-top: 7px;
     font-size: 18px;
     padding-bottom: 5px;
   }
-  .menu__person-info .menu__shape1 .PersonBrief {
+  .menu .menu__person-info .PersonBrief {
     width: 90%;
     font-size: 11px;
-  }
-  .menu .Skill {
-    width: 20%;
-    margin: 0px 30px;
   }
   .menu .PersonSkills {
     padding: 0px;
   }
+  .menu .PersonSkills .Skill {
+    width: 20%;
+    margin: 0px 30px;
+  }
   .menu .PersonSkills .Skill p {
     font-size: 10px;
   }
-  .menu .PersonExperience__Details .Experience__year {
+  .menu .PersonExperience .Experience__Details .Experience__year {
     font-size: 10px;
   }
-  .menu .PersonExperience__Details p {
+  .menu .PersonExperience .Experience__Details p {
     font-size: 8px;
     width: 100%;
     padding-left: 3px;
   }
-  .menu .menu__content {
-    height: 53%;
-  }
-  .menu .close-button {
+  .close-button {
     right: 5%;
   }
-  .menu .menu-checkbox {
+  .menu-checkbox {
     display: none;
   }
-  .menu .button-corner {
+  .button-corner {
     position: absolute;
     bottom: 10%;
     left: 2px;
   }
-  .menu .button-corner .button {
+  .button-corner .button {
     background-color: transparent;
     color: rgb(6, 6, 6);
     padding: 8px 15px;
@@ -542,80 +536,93 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
   header .logo {
     margin-top: 28px;
   }
-  .menu__content {
-    height: 100%;
+  .Banner__contecnt .hello {
+    font-size: 100px;
   }
-  .person-img {
-    margin-top: 60px;
-    width: 100px;
-    height: 100px;
+  .Banner__contecnt .Banner__pargraph {
+    font-size: 12px;
   }
-  .menu__person-info .PersonName {
-    width: 100%;
-    margin: 8px;
+  .Banner__contecnt .Banner_shape1 {
+    display: none;
   }
-  .menu__person-info .PersonBrief {
-    width: 80%;
+  .Work {
+    margin-left: 150px;
   }
-  .menu__person-info .menu__shape1 {
+  .Work .WorkLink {
+    width: 450px;
+    height: 400px;
+  }
+  .Work .WorkLink .Work__img {
+    width: 450px;
+    height: 430px;
+  }
+  .Work__box2 .Work__shape2 {
+    margin-top: 350px;
+    right: 20px;
+  }
+  .Work__box4 .Work_shape3 {
+    margin-right: 35px;
+  }
+  .menu .menu__shape1 {
     margin: 70px 210px;
     width: 15px;
     height: 33px;
   }
-  .menu__person-info .menu__content .menu__shape4 {
-    right: 25%;
+  .menu__content {
+    height: 68%;
+  }
+  .menu__content .menu__shape4 {
     width: 30px;
     height: 25px;
+    right: 25%;
   }
-  .menu__person-info .menu__content .shape2 {
+  .menu__content .shape2 {
     width: 30px;
     height: 20px;
   }
-  .menu__person-info .menu__content .download-container {
+  .menu__content .menu__person-info .person-img {
+    width: 100px;
+    height: 100px;
+    margin-top: 60px;
+  }
+  .menu__content .menu__person-info .download-container {
     right: 32%;
   }
-  .menu__person-info .menu__content .download-container .download-icon {
+  .menu__content .menu__person-info .download-container .download-icon {
     font-size: 16px;
     padding-top: 1px;
     height: 20px;
   }
-  .menu__person-info .menu__content .download-container .PersonResum {
+  .menu__content .menu__person-info .download-container .PersonResum {
     font-size: 10px;
   }
-  .menu__person-info .PersonName {
+  .menu__content .menu__person-info .PersonName {
+    width: 100%;
+    margin: 8px;
     font-size: 26px;
     padding: 5px;
   }
-  .menu__person-info .Skill {
+  .menu__content .menu__person-info .PersonBrief {
+    width: 80%;
+  }
+  .menu__content .Skill {
     margin: 10px 0px;
     width: 35%;
   }
-  .menu__person-info .ProgressLine {
+  .menu__content .ProgressLine {
     width: 60%;
     margin: auto;
   }
-  .menu__person-info .Experience__Details .Experience__year {
+  .menu__content .Experience__Details .Experience__year {
     font-size: 15px;
   }
-  .menu__person-info .Experience__Details p {
+  .menu__content .Experience__Details p {
     font-size: 10px;
     padding: 6px;
     width: 100%;
   }
-  .menu__person-info .hello {
-    font-size: 100px;
-    margin-top: -60px;
-  }
-  .menu__person-info .Banner__pargraph {
-    width: 90%;
-    font-size: 12px;
-  }
-  .menu__person-info .Work__box2 .Work__shape2 {
-    margin-top: 350px;
-    right: 20px;
-  }
-  .menu__person-info .Work__box4 .Work_shape3 {
-    margin-right: 35px;
+  .Footer {
+    width: 144%;
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -689,5 +696,81 @@ input[type=checkbox]:checked + .menu--icon + .menu__content {
   }
   .menu .menu__content .Banner .Banner_shape1 {
     right: 20px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 70%;
+  }
+  .Banner .Banner_shape1 {
+    right: 20px;
+  }
+  .Banner .Banner__contecnt .hello {
+    font-size: 120px;
+  }
+  .Banner .Banner__contecnt .Banner__pargraph {
+    width: 617px;
+    height: 102px;
+    font-size: 13px;
+  }
+  .Work {
+    margin-left: 150px;
+  }
+  .menu .menu__shape1 {
+    margin: 70px 290px;
+    width: 21px;
+    height: 44px;
+  }
+  .menu .menu__dotImg {
+    width: 45%;
+    top: 10%;
+    left: 50%;
+  }
+  .menu .menu__content {
+    height: 100%;
+  }
+  .menu .menu__person-info .shape2 {
+    width: 30px;
+    height: 30px;
+  }
+  .menu .menu__person-info .person-img {
+    width: 110px;
+    height: 110px;
+    margin-top: 60px;
+  }
+  .menu .menu__person-info .download-container {
+    right: 31%;
+  }
+  .menu .menu__person-info .download-container .download-icon {
+    font-size: 18px;
+    height: 22px;
+  }
+  .menu .menu__person-info .download-container .PersonResum {
+    font-size: 10px;
+  }
+  .menu .menu__person-info .PersonName {
+    padding-top: 16px;
+    font-size: 28px;
+  }
+  .menu .menu__person-info .PersonBrief {
+    width: 80%;
+  }
+  .Skill {
+    margin: 0px 0px;
+    width: 30%;
+  }
+  .ProgressLine {
+    width: 80%;
+    margin: auto;
+  }
+  .Experience__Details {
+    border-bottom: none;
+  }
+  .Experience__Details .Experience__year {
+    font-size: 15px;
+  }
+  .Experience__Details p {
+    width: 100%;
+    font-size: 10px;
   }
 }/*# sourceMappingURL=style.css.map */
